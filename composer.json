@@ -1,0 +1,36 @@
+{
+  "name": "php-coda/laravel-coda",
+  "description": "Coda Payment Pages Integration API",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "coda",
+    "payment",
+    "master",
+    "visa"
+  ],
+  "require": {
+    "php": ">=5.6.4"
+  },
+  "type": "library",
+  "authors": [
+    {
+      "name": "Win Mon Swe",
+      "email": "cherrywin88@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PhpCoda\\LaravelCoda\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PhpCoda\\LaravelCoda\\LaravelCodaServiceProvider"
+      ]
+    }
+  }
+}
+
+https://github.com/PHPJunior/laravel-2c2p.git
