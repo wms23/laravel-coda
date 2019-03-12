@@ -9,7 +9,7 @@ return [
     //Please change to production AirtimeURL when you release to production environment.
     //$airtimeRestURL = 'https://airtime.codapayments.com/airtime/api/restful/v1.0/Payment';
 
-    'apikey' => 'e8c1328467d68c23cfe6655692238ba1',
+    'apikey' => '<your API Key>',
     //Please change to your APIKey - https://online.codapayments.com/merchant/developer/references#api_key
 
     'country' 	 => '104',

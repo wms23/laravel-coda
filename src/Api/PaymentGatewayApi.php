@@ -44,7 +44,7 @@ class PaymentGatewayApi
         $request->orderId = (string) round(microtime(true) * 1000);
         $request->apiKey = $this->config->get('laravel-coda.apiKey');
         $request->payType = $this->config->get('laravel-coda.txnType');
-        $request->items = $this->getItems ($input);
+        $request->items = $this->getItems($input);
         /*$arrProfile = array(
           "entry" => array(
             "key" => "need_mno_id",
@@ -70,10 +70,10 @@ class PaymentGatewayApi
         foreach ($_REQUEST as $key=>$value) {
 
             if ($this->startsWith( $key, "Item") ) {
-                $vals = explode ("_", $value);
+                $vals = $value;
 
-                $code = $vals[0];
-                $price = $vals[1];
+                $code = 123;
+                $price = $vals;
 
                 $item = new ItemInfo;
                 $item->name = $key;
