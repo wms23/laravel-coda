@@ -3,7 +3,6 @@
 namespace PhpCoda\LaravelCoda\Api;
 
 use Carbon\Carbon;
-use PhpJunior\Laravel2C2P\Encryption\Encryption;
 
 include('InquiryPaymentResult.php');
 include('InquiryPaymentRequest.php');
@@ -19,7 +18,6 @@ class PaymentGatewayApi
      * PaymentGatewayApi constructor.
      *
      * @param $config
-     * @param $encryption
      */
     public function __construct($config)
     {
@@ -42,7 +40,7 @@ class PaymentGatewayApi
         $request->country = $this->config->get('laravel-coda.country');
         $request->currency = $this->config->get('laravel-coda.currency');
         $request->orderId = (string) round(microtime(true) * 1000);
-        $request->apiKey = $this->config->get('laravel-coda.apiKey');
+        $request->apiKey = $this->config->get('laravel-coda.apikey');
         $request->payType = $this->config->get('laravel-coda.txnType');
         $request->items = $this->getItems($input);
         /*$arrProfile = array(
@@ -198,7 +196,7 @@ class PaymentGatewayApi
         $response->txnId = $reader->initResult->{'txnId'};
 
         if ( (int) $response->resultCode > 0) {
-            $response->resultDesc = $result->initResult->{'resultDesc'};
+            // $response->resultDesc = $result->initResult->{'resultDesc'};
         }
 
         return $response;
