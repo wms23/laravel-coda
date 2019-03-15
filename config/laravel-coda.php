@@ -1,26 +1,17 @@
 <?php
 
 return [
-    'airtimeURL' => 'https://sandbox.codapayments.com/airtime/',
-    //Please change to production AirtimeURL when you release to production environment.
-    //$airtimeURL = 'https://airtime.codapayments.com/airtime/';
+    'airtimeURL' => env('airtimeURL'),
+   
+    'airtimeRestURL' => env('airtimeRestURL'),
 
-    'airtimeRestURL' => 'https://sandbox.codapayments.com/airtime/api/restful/v1.0/Payment',
-    //Please change to production AirtimeURL when you release to production environment.
-    //$airtimeRestURL = 'https://airtime.codapayments.com/airtime/api/restful/v1.0/Payment';
+    'apikey' => env('apikey'),
 
-    'apikey' => '<your API Key>',
-    //Please change to your APIKey - https://online.codapayments.com/merchant/developer/references#api_key
+    'country' 	 => env('country'),
 
-    'country' 	 => '104',
-    'currency' 	 => '104',
-    //Please check link https://online.codapayments.com/merchant/developer/references#currency_codes
+    'currency' 	 => env('currency'),
 
-    'txnType' 	 => '1',
-    //PaymentType => for example DCB = 1
-    //Please check link https://online.codapayments.com/merchant/developer/documentation#paymentTypeInfo
-
-    'requestType' => 'json',
-    //json or xml
-
+    'txnType' 	 => env('txnType'),
+    
+    'requestType' => env('txnType','json'),
 ];
