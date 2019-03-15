@@ -57,7 +57,7 @@ return [
 
 #### Payment Request [ Using the Payment Gateway API and SecurePay ]
 
-Construct Payment Form
+Sample Construct Payment Form
 
 Add the `data-encrypt` fields into the form to capture card information securely.
 
@@ -74,7 +74,6 @@ Add the `data-encrypt` fields into the form to capture card information securely
                data: $('#itemForm').serialize() + "&type=InitTxn",
                // console.log(data);
                success: function (data) {
-                   alert(data);
                    if (payType == 1) {
                        airtime_checkout(data);
                    } else if (payType == 2) {
@@ -93,6 +92,13 @@ Add the `data-encrypt` fields into the form to capture card information securely
            } );
        }    
 </script>
+<form method="POST" action="#" accept-charset="UTF-8" id="itemForm">
+    <input type="text" id="Name" placeholder="Enter Name" name="Name" required="required">
+    <input type="text" id="Item" placeholder="Enter amount" name="Item" required="required">
+    <div class="form-actions">
+        <a href="javascript:processPayment(this);">Payment Now</a>
+    </div>
+</form>
 ```
 
 Submit the request your back end code will receives

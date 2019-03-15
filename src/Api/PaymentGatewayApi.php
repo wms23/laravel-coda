@@ -74,7 +74,7 @@ class PaymentGatewayApi
                 $price = $vals;
 
                 $item = new ItemInfo;
-                $item->name = $key;
+                $item->name = $httpRequest['Name'];
                 $item->code = $code;
                 $item->price = (double) $price;
                 $item->type = '';
