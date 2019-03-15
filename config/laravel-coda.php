@@ -13,5 +13,5 @@ return [
 
     'txnType' 	 => env('txnType'),
     
-    'requestType' => env('txnType','json'),
+    'requestType' => env('requestType','json'),
 ];
