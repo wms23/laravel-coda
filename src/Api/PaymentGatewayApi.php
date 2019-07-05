@@ -43,13 +43,13 @@ class PaymentGatewayApi
         $request->apiKey = $this->config->get('laravel-coda.apikey');
         $request->payType = $this->config->get('laravel-coda.txnType');
         $request->items = $this->getItems($input);
-        /*$arrProfile = array(
+        $arrProfile = array(
           "entry" => array(
-            "key" => "need_mno_id",
-            "value" => "Yes"
+            "key" => "user_id",
+            "value" => $input['orderId']
             )
           );
-        $request->profile = $arrProfile;*/
+        $request->profile = $arrProfile;
 
         $result = $this->initTxn($request);
 
