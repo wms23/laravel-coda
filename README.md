@@ -34,8 +34,6 @@ return [
    
     'airtimeRestURL' => env('airtimeRestURL'),
 
-    'apikey' => env('apikey'),
-
     'country'    => env('country'),
 
     'currency'   => env('currency'),
@@ -50,7 +48,6 @@ Add your application configuration to a .env file
 ```php
 airtimeURL=*********
 airtimeRestURL=*******
-apikey=********
 country=********
 currency=********
 txnType=*********
@@ -98,6 +95,7 @@ Add the `data-encrypt` fields into the form to capture card information securely
 <form method="POST" action="#" accept-charset="UTF-8" id="itemForm">
     <input type="text" id="Name" placeholder="Enter Name" name="Name" required="required">
     <input type="text" id="Item" placeholder="Enter amount" name="Item" required="required">
+    <input type="text" id="apikey" placeholder="Enter amount" name="apikey" required="required">
     <div class="form-actions">
         <a href="javascript:processPayment(this);">Payment Now</a>
     </div>

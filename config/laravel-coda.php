@@ -5,8 +5,6 @@ return [
    
     'airtimeRestURL' => env('airtimeRestURL'),
 
-    'apikey' => env('apikey'),
-
     'country' 	 => env('country'),
 
     'currency' 	 => env('currency'),

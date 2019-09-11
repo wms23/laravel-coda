@@ -40,7 +40,7 @@ class PaymentGatewayApi
         $request->country = $this->config->get('laravel-coda.country');
         $request->currency = $this->config->get('laravel-coda.currency');
         $request->orderId = $input['orderId'];
-        $request->apiKey = $this->config->get('laravel-coda.apikey');
+        $request->apiKey = $input['apikey'];
         $request->payType = $this->config->get('laravel-coda.txnType');
         $request->items = $this->getItems($input);
         $arrProfile = array(
